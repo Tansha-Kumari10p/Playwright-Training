@@ -23,7 +23,10 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['html'],
+    ['allure-playwright']
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -36,6 +39,7 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
 
+    //yahan ap testmatch ke through bta rhe ho ke setup files ki naming convention kya hai, jisse ki playwright ko pata chal jaye ke setup files kaun si hain aur unko pehle run karna hain baki tests se pehle.
     { name: 'setup', testMatch: /.*\.setup\.js/ },
 
     {
