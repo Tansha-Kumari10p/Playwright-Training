@@ -1,0 +1,6 @@
+{
+  id: 'ff8081819d82fab6019f1dbc613903b4',
+  name: 'Apple MacBook Pro 16',
+  updatedAt: 1782910313514,
+  data: { price: 500 }
+}
