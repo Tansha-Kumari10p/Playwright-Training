@@ -44,7 +44,7 @@ jobs:
         if: always()
         run: |
           if [ -d "allure-results" ]; then
-            npm run allure:generate
+            npx run allure:generate
           else
             echo "No allure-results directory found."
           fi
