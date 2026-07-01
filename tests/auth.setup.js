@@ -8,9 +8,9 @@ const authFile = 'playwright/.auth/authentication.json';
 setup('Log in to the application', async ({page}) => {
 
     const loginPage = new LoginPage(page);
-    await page.goto(`${testdata.base_URL}/practice-test-login/`);
+    await page.goto(`https://practicetestautomation.com/practice-test-login/`);
     await loginPage.login(testdata.username, testdata.password);
-    await expect(page).toHaveURL(`${testdata.base_URL}/logged-in-successfully/`);
+    await expect(page).toHaveURL(`https://practicetestautomation.com/logged-in-successfully/`);
 
     // Store the login state in the storage file for use in other tests
     await page.context().storageState({ path: authFile });
