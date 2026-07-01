@@ -1,3 +1,5 @@
 {
+        "username": "student",  
+        "password": "Password123",
         "base_URL": "https://practicetestautomation.com"
 }
