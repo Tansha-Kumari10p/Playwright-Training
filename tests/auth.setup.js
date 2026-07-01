@@ -12,7 +12,7 @@ setup('Log in to the application', async ({page}) => {
     await loginPage.login(testdata.username, testdata.password);
     await expect(page).toHaveURL(`https://practicetestautomation.com/logged-in-successfully/`);
 
-    // Store the login state in the storage file for use in other tests
+    // Store the login state in the storage file for use in other test
     await page.context().storageState({ path: authFile });
 });
 
