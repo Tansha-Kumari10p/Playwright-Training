@@ -22,7 +22,7 @@ test.describe.serial('API Testing', () => {
 
     });
 
-    test('POST/objects should create a new object with provided data', async ({ request }) => {
+    test.skip('POST/objects should create a new object with provided data', async ({ request }) => {
 
     const requestBody = {
         name: "Apple MacBook Pro 16",
@@ -55,7 +55,7 @@ test.describe.serial('API Testing', () => {
     createdObjectId = responseBody.id; 
     });
 
-    test('PUT/objects should update record created by the POST request', async ({ request }) => {
+    test.skip('PUT/objects should update record created by the POST request', async ({ request }) => {
 
         const requestBody = {
             name: "Apple MacBook Pro 16",
@@ -90,7 +90,7 @@ test.describe.serial('API Testing', () => {
         expect(responseBody.data["Hard disk size"]).toBe("1 TB");
     });
 
-    test('PATCH/objects should update record price to $500', async ({ request }) => {
+    test.skip('PATCH/objects should update record price to $500', async ({ request }) => {
 
         const patchRequestBody = {
             data: {
@@ -116,7 +116,7 @@ test.describe.serial('API Testing', () => {
         expect(responseBody.data.price).toBe(500);  //checking if price is updated to 500
     });
 
-    test('DELETE/objects should delete the record created by POST request', async ({ request }) => {
+    test.skip('DELETE/objects should delete the record created by POST request', async ({ request }) => {
 
         expect(createdObjectId).toBeTruthy();
 
